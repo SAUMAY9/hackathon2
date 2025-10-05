@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aluminum Recycling on Mars</title>
+  <!-- Tailwind CSS Import -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Spline 3D Viewer Module Import -->
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.74/build/spline-viewer.js"></script>
+  <style>
+    /* Custom styling to ensure the content wrapper is full screen and scrollable */
+    body {
+      font-family: 'Inter', sans-serif;
+      /* Remove default background color as Spline will cover it */
+      min-height: 100vh;
+    }
+  </style>
+
+<style>
+    .center-img {
+      display: block;              /* makes image a block element */
+      margin-left: auto;           /* auto margins center it */
+      margin-right: auto;
+      width: 450px;                /* set image size */
+      border-radius: 20px;         /* rounded corners */
+    }
+  </style>
+
+
+</head>
+<body class="text-gray-800 font-sans min-h-screen relative">
+
+  <!-- 1. SPLINE 3D BACKGROUND -->
+  <!-- Positioned fixed, covers the whole screen, and uses a low z-index -->
+  <spline-viewer class="fixed inset-0 w-full h-full z-0" url="https://prod.spline.design/lnnhjMHF-t2-kZ4C/scene.splinecode"></spline-viewer>
+
+  <!-- 2. READABILITY OVERLAY -->
+  <!-- A subtle dark overlay helps text stand out against a potentially bright 3D background -->
+  <div class="fixed inset-0 bg-black opacity-10 z-0"></div>
+
+  <!-- 3. MAIN CONTENT WRAPPER -->
+  <!-- Uses a higher z-index to sit on top of the 3D background -->
+  <div class="relative z-10 min-h-screen flex flex-col">
+    <header class="bg-green-700/80 backdrop-blur-sm text-white py-6 shadow-xl">
+      <h1 class="text-center text-3xl font-extrabold tracking-wide">
+        ♻️ Aluminum → Casting
+      </h1>
+    </header>
+
+    <main class="max-w-4xl mx-auto p-6 space-y-8 flex-grow">
+
+      <!-- Description Section -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl p-6 border-l-4 border-green-500 transform transition duration-300 hover:scale-[1.02]">
+        <h2 class="text-2xl font-bold text-green-700 flex items-center">
+          <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7l16 7-16 7V7z"></path></svg>
+          Sustainable Aluminum Recycling on Mars
+        </h2>
+        <p class="mt-4 text-gray-700 leading-relaxed">
+          Aluminum structures can be recycled by using <span class="font-bold text-green-600">olivine sand</span> (abundantly available in Jezero Crater) as foundry sand to cast aluminum objects. By using concentrated solar furnaces capable of melting mission-derived aluminum scrap, we can produce molten metal for casting. Essential objects like <span class="font-bold text-green-600">sprinklers and tools</span> can be produced, which is highly critical for long-term Mars mission self-sufficiency and resource utilization.<br>
+This has a difficulty factor of 2/3.
+        </p>
+      </section>
+
+<img src="WhatsApp Image 2025-10-05 at 10.39.12_c950985b.jpg" alt="aluminiumprocess" class="center-img">
+
+      <!-- Step 1: Collection -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition duration-300 hover:shadow-green-300">
+        <h2 class="text-xl font-semibold text-gray-900">1. Collection 📦</h2>
+        <p class="mt-2 text-gray-700">
+          <span class="font-bold text-green-600">Process:</span> Manual Retrieval from Cargo & Habitat Supplies.
+        </p>
+        <p class="text-gray-600 italic">
+          <span class="font-bold">Action:</span> Gather leftover aluminum structures (e.g., framework, packaging) left after habitat inflation and separate them from other waste materials for processing.
+        </p>
+      </section>
+
+      <!-- Step 2: Cleaning -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition duration-300 hover:shadow-green-300">
+        <h2 class="text-xl font-semibold text-gray-900">2. Cleaning ✨</h2>
+        <p class="mt-2 text-gray-700">
+          <span class="font-bold text-green-600">Process:</span> Removal of Contaminants.
+        </p>
+        <p class="text-gray-600 italic">
+          <span class="font-bold">Action:</span> Remove dust, dirt, or any chemical residues to prepare the aluminum for melting and subsequent casting use, ensuring structural integrity.
+        </p>
+      </section>
+
+      <!-- Step 3: Shredding -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition duration-300 hover:shadow-green-300">
+        <h2 class="text-xl font-semibold text-gray-900">3. Shredding 🔪</h2>
+        <p class="mt-2 text-gray-700">
+          <span class="font-bold text-green-600">Process:</span> Mechanical Shredding.
+        </p>
+        <p class="text-gray-600 italic">
+          <span class="font-bold">Action:</span> Cut or shred large aluminum pieces into smaller fragments or flakes to maximize surface area, making the metal easier and more energy-efficient to melt in the furnace.
+        </p>
+      </section>
+
+      <!-- Step 4: Melting -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition duration-300 hover:shadow-green-300">
+        <h2 class="text-xl font-semibold text-gray-900">4. Melting 🔥</h2>
+        <p class="mt-2 text-gray-700">
+          <span class="font-bold text-green-600">Process:</span> Melting of aluminum using concentrated solar furnaces.
+        </p>
+        <p class="text-gray-600 italic">
+          <span class="font-bold">Action:</span> Place the metal shreds in the solar furnace and concentrate solar energy until the aluminum reaches its melting point, creating pure molten metal.
+        </p>
+      </section>
+
+      <!-- Step 5: Creating Molds -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition duration-300 hover:shadow-green-300">
+        <h2 class="text-xl font-semibold text-gray-900">5. Creating Molds 🏗️</h2>
+        <p class="mt-2 text-gray-700">
+          <span class="font-bold text-green-600">Process:</span> Creating molds using Jezero Crater regolith (olivine sand).
+        </p>
+        <p class="text-gray-600 italic">
+          <span class="font-bold">Action:</span> Use olivine sand, abundantly available on Mars, as a foundry material to create precision molds for various products like utensils and essential habitat sprinklers.
+        </p>
+      </section>
+
+      <!-- Step 6: Creating Final Product -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition duration-300 hover:shadow-green-300">
+        <h2 class="text-xl font-semibold text-gray-900">6. Creating Final Product 🛠️</h2>
+        <p class="mt-2 text-gray-700">
+          <span class="font-bold text-green-600">Process:</span> Pouring molten aluminum into the molds.
+        </p>
+        <p class="text-gray-600 italic">
+          <span class="font-bold">Action:</span> Carefully pour the molten aluminum into the regolith molds. Allow the metal to cool and solidify before separating the finished product from the mold material.
+        </p>
+      </section>
+
+    </main>
+
+    <footer class="bg-gray-800/80 backdrop-blur-sm text-center py-4 mt-10 text-sm text-gray-300 shadow-inner">
+      <p class="tracking-wider">© 2025 Aluminum Recycling Process | Sustainable Mars Habitat Initiative</p>
+      <p class="text-xs mt-1 text-gray-400">3D Background provided by Spline Tool.</p>
+    </footer>
+  </div>
+</body>
+</html>

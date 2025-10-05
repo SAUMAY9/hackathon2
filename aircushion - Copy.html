@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Air Cushion Ballast Process</title>
+  <!-- Tailwind CSS Import -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Spline 3D Viewer Module Import -->
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.74/build/spline-viewer.js"></script>
+  <style>
+    /* Custom styling to ensure the content wrapper is full screen and scrollable */
+    body {
+      font-family: 'Inter', sans-serif;
+      /* Remove default background color as Spline will cover it */
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body class="text-gray-800 font-sans min-h-screen relative">
+
+  <!-- 1. SPLINE 3D BACKGROUND -->
+  <!-- Positioned fixed, covers the whole screen, and uses a low z-index -->
+  <spline-viewer class="fixed inset-0 w-full h-full z-0" url="https://prod.spline.design/lnnhjMHF-t2-kZ4C/scene.splinecode"></spline-viewer>
+
+  <!-- 2. READABILITY OVERLAY -->
+  <!-- A subtle dark overlay helps text stand out against a potentially bright 3D background -->
+  <div class="fixed inset-0 bg-black opacity-10 z-0"></div>
+
+  <!-- 3. MAIN CONTENT WRAPPER -->
+  <!-- Uses a higher z-index to sit on top of the 3D background -->
+  <div class="relative z-10 min-h-screen flex flex-col">
+    <header class="bg-green-700/80 backdrop-blur-sm text-white py-6 shadow-xl">
+      <h1 class="text-center text-3xl font-extrabold tracking-wide">
+        ♻️ Air Cushion → Regolith-Filled Ballast
+      </h1>
+    </header>
+
+    <main class="max-w-4xl mx-auto p-6 space-y-8 flex-grow">
+
+      <!-- Description Section -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl p-6 border-l-4 border-green-500 transform transition duration-300 hover:scale-[1.02]">
+        <h2 class="text-2xl font-bold text-green-700 flex items-center">
+          <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          Sustainable Air Cushion Utilization on Mars
+        </h2>
+        <p class="mt-4 text-gray-700 leading-relaxed">
+          Air cushions can be repurposed from packaging waste into essential structural components. By using local Martian regolith (soil), we can efficiently convert these plastic remnants into dense, heavy ballasts. This method avoids relying on Earth-based resources for stability, achieving a substantial 12x mass increase: <span class="font-bold text-green-600">10 kg of cushion material yields up to 120 kg of stable ballast.</span><br>
+Air cushions are made of <b>Polyethylene</b>.<br>
+Difficulty factor: 1/3
+        </p>
+      </section>
+
+      <!-- Step 1 -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition duration-300 hover:shadow-green-300">
+        <h2 class="text-xl font-semibold text-gray-900">1. Collection 📦</h2>
+        <p class="mt-2 text-gray-700">
+          <span class="font-bold text-green-600">Process:</span> Manual Retrieval from Incoming Cargo and Habitat Supplies.
+        </p>
+        <p class="text-gray-600 italic">
+          <span class="font-bold">Action:</span> Systematically gather all leftover air cushions following crew and cargo landings, ensuring they are separated from general waste streams for dedicated recycling.
+        </p>
+      </section>
+
+      <!-- Step 2 -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition duration-300 hover:shadow-green-300">
+        <h2 class="text-xl font-semibold text-gray-900">2. Cleaning ✨</h2>
+        <p class="mt-2 text-gray-700">
+          <span class="font-bold text-green-600">Process:</span> Contaminant Removal (Dust & Residues).
+        </p>
+        <p class="text-gray-600 italic">
+          <span class="font-bold">Action:</span> Utilize mild solvents or Martian atmospheric vapor (if available) to clean off fine regolith dust, dirt, or any residual chemical agents from the cushion surfaces, preparing them for filling.
+        </p>
+      </section>
+
+      <!-- Step 3 -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition duration-300 hover:shadow-green-300">
+        <h2 class="text-xl font-semibold text-gray-900">3. Creating Ballast ⛰️</h2>
+        <p class="mt-2 text-gray-700">
+          <span class="font-bold text-green-600">Process:</span> Filling and Sealing with Local Regolith.
+        </p>
+        <p class="text-gray-600 italic">
+          <span class="font-bold">Action:</span> Puncture the cushions, fill the empty plastic shells with locally sourced Martian regolith to achieve maximum density, and then seal the containers securely to form a stable, high-mass ballast unit.
+        </p>
+      </section>
+
+    </main>
+
+    <footer class="bg-gray-800/80 backdrop-blur-sm text-center py-4 mt-10 text-sm text-gray-300 shadow-inner">
+      <p class="tracking-wider">© 2025 Air Cushion Ballast Process | Sustainable Mars Habitat Initiative</p>
+      <p class="text-xs mt-1 text-gray-400">3D Background provided by Spline Tool.</p>
+    </footer>
+  </div>
+</body>
+</html>

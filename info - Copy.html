@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Info</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* small overrides for info page */
+    main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+    .back { margin-bottom: 1rem; display:inline-block; }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="index.html">← Back</a>
+    <h1 id="info-title">Loading…</h1>
+    <div id="info-body">Please wait.</div>
+  </main>
+
+  <script>
+    // Same / extended data mapping (server-side would be better for many items)
+    const INFO = {
+      "ALUMINIUM": {
+        "landing": { title: "Landing Page", desc: "A small static marketing page." },
+        "dashboard": { title: "Dashboard", desc: "Interactive admin dashboard with analytics." }
+      },
+      "FOAM PACKAGING": {
+        "android": { title: "Android App", desc: "Native Android application build details." },
+        "ios": { title: "iOS App", desc: "Native iOS application build details." }
+      },
+      "Research": {
+        "paper": { title: "Research Paper", desc: "Paper describing the theory and results." },
+        "prototype": { title: "Prototype", desc: "A working prototype demonstration." }
+      }
+    };
+
+    const params = new URLSearchParams(location.search);
+    const cat = params.get("cat");
+    const item = params.get("item");
+
+    const titleEl = document.getElementById("info-title");
+    const bodyEl = document.getElementById("info-body");
+
+    if (!cat || !item || !INFO[cat] || !INFO[cat][item]) {
+      titleEl.textContent = "Selection not found";
+      bodyEl.innerHTML = "<p>We couldn't find information for that selection. Please go back and choose an option.</p>";
+    } else {
+      const info = INFO[cat][item];
+      titleEl.textContent = info.title;
+      bodyEl.innerHTML = `<p>${info.desc}</p>`;
+      // If you want richer content, you can store HTML fragments or fetch details from a JSON file/server.
+    }
+  </script>
+</body>
+</html>

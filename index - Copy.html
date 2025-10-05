@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Project Landing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HERO / Heading with background image and title overlay -->
+  <header class="hero" role="banner" aria-label="Project hero">
+    <div class="hero-inner">
+      <h1 class="site-title">SpaceTrash Hack: Revolutionizing Recycling on Mars</h1>
+      <p class="hero-sub">Goal: convert the 12,600 kg inorganic three-year waste stream for an 8-person mission into useful feedstocks, habitat outfitting, tools, and construction materials, while minimizing crew time, water use, toxic emissions, and discarded mass.</p>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="container" role="main">
+
+    <!-- Dropdown area ABOVE About section -->
+    <section class="selector-section" aria-label="Options selector">
+      <label for="select-category">Choose category:</label>
+      <select id="select-category" aria-controls="select-item">
+        <option value="">— Select category —</option>
+        <!-- options filled by JS -->
+      </select>
+
+      <label for="select-item">Choose item:</label>
+      <select id="select-item" disabled>
+        <option value="">— Select item —</option>
+      </select>
+
+      <button id="go-btn" disabled>Go</button>
+    </section>
+
+    <!-- About the Project + side images -->
+    <section class="project-section">
+      <article class="project-text">
+        <h2>About the Project</h2>
+        <p>
+          During a hypothetical three-year mission to Mars and back, an eight-person crew would accumulate 12,600 kg of inorganic waste, or trash, including various packaging materials, textiles, and structural materials. This scenario creates a pressing need to recycle available materials, rather than execute the expensive and inefficient processes of transporting additional resources from Earth and/or sending trash back to Earth. As humans prepare to explore unknown worlds in the future, your challenge is to design sustainable systems that could manage, reuse, or recycle inorganic waste (“trash”) that is brought to and/or accumulated on the surface of Mars.
+        </p>
+        <p>
+          <b>Team_Nova Members:</b><br>SAUMAY MISHRA<br>
+                  PIYUSH GUPTA<br>
+                  PRIYANSH KOCHHAR
+        </p>
+      </article>
+
+      <aside class="side-images" aria-label="Project images">
+        <img src="screenshot1.png" alt="Screenshot 1" loading="lazy">
+        <img src="screenshot2.jpg" alt="Screenshot 2" loading="lazy">
+      </aside>
+    </section>
+
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+
+

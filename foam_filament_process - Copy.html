@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foam to Filament Process</title>
+  <!-- Tailwind CSS Import -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Spline 3D Viewer Module Import -->
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.74/build/spline-viewer.js"></script>
+  <style>
+    /* Custom styling to ensure the content wrapper is full screen and scrollable */
+    body {
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body class="text-gray-800 font-sans min-h-screen relative">
+
+  <!-- 1. SPLINE 3D BACKGROUND -->
+  <!-- Positioned fixed, covers the whole screen, and uses a low z-index -->
+  <spline-viewer class="fixed inset-0 w-full h-full z-0" url="https://prod.spline.design/lnnhjMHF-t2-kZ4C/scene.splinecode"></spline-viewer>
+
+  <!-- 2. READABILITY OVERLAY -->
+  <!-- A subtle dark overlay helps text stand out against a potentially bright 3D background -->
+  <div class="fixed inset-0 bg-black opacity-10 z-0"></div>
+
+  <!-- 3. MAIN CONTENT WRAPPER -->
+  <!-- Uses a higher z-index (z-10) to sit on top of the 3D background -->
+  <div class="relative z-10 min-h-screen flex flex-col">
+    <header class="bg-green-700/80 backdrop-blur-sm text-white py-6 shadow-xl">
+      <h1 class="text-center text-3xl font-extrabold tracking-wide">
+        ♻️ Foam Packaging → 3D Printing Filament
+      </h1>
+    </header>
+
+    <main class="max-w-4xl mx-auto p-6 space-y-6 flex-grow">
+
+      <!-- Description Section -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl p-6 border-l-4 border-green-500 transform transition duration-300 hover:scale-[1.02]">
+        <h2 class="text-2xl font-bold text-green-700 flex items-center">
+          <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+          Sustainable Foam Recycling on Mars
+        </h2>
+        <p class="mt-4 text-gray-700 leading-relaxed">
+          Astronauts on Mars face limited resources and accumulating foam packaging waste from cargo shipments. This process provides a sustainable solution by transforming discarded foam into **3D printing filament** for habitat use. Through collection, shredding, densification, pellet extrusion, purification, and filament extrusion, the recycled material is converted into functional items such as replacement parts, insulation panels, storage solutions, and modular furniture. A step-by-step visual timeline demonstrates how waste can be efficiently reused, supporting circular resource management and resilient off-world habitats.<br>
+The most common type of foam used for space exploration is <b>Zotek F30</b>.<br>
+This process has a Difficulty Factor of 3/3.
+        </p>
+      </section>
+
+      <!-- Step 1: Collection & Sorting -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition duration-300 hover:shadow-green-300">
+        <h2 class="text-xl font-semibold text-gray-900">1. Collection & Sorting 🗑️</h2>
+        <p class="mt-2 text-gray-700">
+          <span class="font-bold text-green-600">Process:</span> Manual Collection + Sorting
+        </p>
+        <p class="text-gray-600 italic">
+          <span class="font-bold">Action:</span> Gather foam packaging from cargo shipments and separate it from other wastes.
+        </p>
+      </section>
+
+      <!-- Step 2: Shredding -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition duration-300 hover:shadow-green-300">
+        <h2 class="text-xl font-semibold text-gray-900">2. Shredding ⚙️</h2>
+        <p class="mt-2 text-gray-700">
+          <span class="font-bold text-green-600">Process:</span> Mechanical Shredding / Granulation
+        </p>
+        <p class="text-gray-600 italic">
+          <span class="font-bold">Action:</span> Foam blocks are shredded into small flakes or pellets to reduce volume and make them processable.
+        </p>
+      </section>
+
+      <!-- Step 3: Densification -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition duration-300 hover:shadow-green-300">
+        <h2 class="text-xl font-semibold text-gray-900">3. Densification  </h2>
+        <p class="mt-2 text-gray-700">
+          <span class="font-bold text-green-600">Process:</span> Thermal Compression (Heat + Pressure)
+        </p>
+        <p class="text-gray-600 italic">
+          <span class="font-bold">Action:</span> Foam flakes are compacted by heating to remove trapped air, forming dense solid plastic blocks.
+        </p>
+      </section>
+
+      <!-- Step 4: Extrusion to Pellets -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition duration-300 hover:shadow-green-300">
+        <h2 class="text-xl font-semibold text-gray-900">4. Extrusion to Pellets 🍚</h2>
+        <p class="mt-2 text-gray-700">
+          <span class="font-bold text-green-600">Process:</span> Thermal Extrusion + Pelletizing
+        </p>
+        <p class="text-gray-600 italic">
+          <span class="font-bold">Action:</span> The densified foam is melted and extruded through a screw extruder, then cut into uniform pellets.
+        </p>
+      </section>
+
+      <!-- Step 5: Purification & Additive Mixing -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition duration-300 hover:shadow-green-300">
+        <h2 class="text-xl font-semibold text-gray-900">5. Purification & Additive Mixing 🧪</h2>
+        <p class="mt-2 text-gray-700">
+          <span class="font-bold text-green-600">Process:</span> Filtration + Blending
+        </p>
+        <p class="text-gray-600 italic">
+          <span class="font-bold">Action:</span> Filter out impurities. Add strengtheners (e.g., basalt fiber powder from Martian regolith or carbon fiber from other packaging waste).
+        </p>
+      </section>
+
+      <!-- Step 6: Filament Extrusion -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition duration-300 hover:shadow-green-300">
+        <h2 class="text-xl font-semibold text-gray-900">6. Filament Extrusion 🧵</h2>
+        <p class="mt-2 text-gray-700">
+          <span class="font-bold text-green-600">Process:</span> Melt Extrusion with Diameter Control
+        </p>
+        <p class="text-gray-600 italic">
+          <span class="font-bold">Action:</span> Pellets are fed into a filament extruder and drawn into 1.75 mm or 2.85 mm filament spools.
+        </p>
+      </section>
+
+      <!-- Step 7: Cooling & Spooling -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition duration-300 hover:shadow-green-300">
+        <h2 class="text-xl font-semibold text-gray-900">7. Cooling & Spooling ❄️</h2>
+        <p class="mt-2 text-gray-700">
+          <span class="font-bold text-green-600">Process:</span> Air/Water Cooling + Automated Spooling
+        </p>
+        <p class="text-gray-600 italic">
+          <span class="font-bold">Action:</span> Extruded filament is cooled, solidified, and wound onto spools.
+        </p>
+      </section>
+
+      <!-- Step 8: 3D Printing Applications -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition duration-300 hover:shadow-green-300">
+        <h2 class="text-xl font-semibold text-gray-900">8. 3D Printing Applications 🧱</h2>
+        <p class="mt-2 text-gray-700">
+          <span class="font-bold text-green-600">Process:</span> FDM 3D Printing
+        </p>
+        <p class="text-gray-600 italic">
+          <span class="font-bold">Action:</span> Filament is used to print replacement parts, storage solutions, insulation panels, or modular furniture inside the habitat.
+        </p>
+      </section>
+
+    </main>
+
+    <footer class="bg-gray-800/80 backdrop-blur-sm text-center py-4 mt-10 text-sm text-gray-300 shadow-inner">
+      <p class="tracking-wider">© 2025 Foam-to-Filament Process | Sustainable 3D Printing</p>
+      <p class="text-xs mt-1 text-gray-400">3D Background provided by Spline Tool.</p>
+    </footer>
+  </div>
+</body>
+</html>

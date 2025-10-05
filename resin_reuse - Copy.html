@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resin → Habitat Components Flowchart</title>
+  <!-- Tailwind CSS Import -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Spline 3D Viewer Module Import -->
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.74/build/spline-viewer.js"></script>
+  <style>
+    /* Custom styling to ensure the content wrapper is full screen and scrollable */
+    body {
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body class="text-gray-800 font-sans min-h-screen relative">
+
+  <!-- 1. SPLINE 3D BACKGROUND -->
+  <!-- Positioned fixed, covers the whole screen, and uses a low z-index -->
+  <spline-viewer class="fixed inset-0 w-full h-full z-0" url="https://prod.spline.design/lnnhjMHF-t2-kZ4C/scene.splinecode"></spline-viewer>
+
+  <!-- 2. READABILITY OVERLAY -->
+  <!-- A subtle dark overlay helps text stand out against a potentially bright 3D background -->
+  <div class="fixed inset-0 bg-black opacity-10 z-0"></div>
+
+  <!-- 3. MAIN CONTENT WRAPPER -->
+  <!-- Uses a higher z-index (z-10) to sit on top of the 3D background -->
+  <div class="relative z-10 min-h-screen flex flex-col">
+    <header class="bg-green-700/80 backdrop-blur-sm text-white py-6 shadow-xl">
+      <h1 class="text-center text-3xl font-extrabold tracking-wide">
+        ♻️ Resin → Habitat Components Flowchart
+      </h1>
+    </header>
+
+    <main class="max-w-4xl mx-auto p-6 space-y-6 flex-grow">
+
+      <!-- Description Section -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl p-6 border-l-4 border-green-500 transform transition duration-300 hover:scale-[1.02]">
+        <h2 class="text-2xl font-bold text-green-700 flex items-center">
+          <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.568.353 1.25.106 1.724-.575z"></path></svg>
+          Reuse of Resin in Habitat Construction
+        </h2>
+        <p class="mt-4 text-gray-700 leading-relaxed">
+          Collected plastic resin, after sorting, cleaning, and size reduction, can be transformed into usable habitat components rather than being discarded. **Thermoplastics** can be remelted into sheets for bladders and patches or extruded into filaments for 3D printing connectors, valves, and anchors. **Thermoset plastics** or contaminated materials can be ground into powder and incorporated as fillers in composite prints. After deployment, any undamaged sheets, films, or printed parts can be salvaged and reused for repairs, spare components, or new fabrication. This creates a closed-loop recycling system, maximizing material efficiency and reducing waste in the habitat construction process.<br>
+The main components of plastic resin are <b>Thermoset/Thermoplastic Resin - 40%, Carbon Fibre - 60%.</b>
+        </p>
+      </section>
+
+      <!-- Step 1: Collection & Quick Triage -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition duration-300 hover:shadow-green-300">
+        <h2 class="text-xl font-semibold text-gray-900">1. Collection & Quick Triage 🗂️</h2>
+        <p class="mt-2 text-gray-700">
+          <span class="font-bold text-green-600">Action:</span> Separate likely thermoplastics (LDPE, HDPE, PP, PET, ABS, PLA) from thermosets (epoxy, cured resins).
+        </p>
+      </section>
+
+      <!-- Step 2: Cleaning -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition duration-300 hover:shadow-green-300">
+        <h2 class="text-xl font-semibold text-gray-900">2. Cleaning 🧼</h2>
+        <p class="mt-2 text-gray-700">
+          <span class="font-bold text-green-600">Action:</span> Remove contaminants using water + biodegradable detergent or wet wipes.
+        </p>
+      </section>
+
+      <!-- Step 3: Size Reduction -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition duration-300 hover:shadow-green-300">
+        <h2 class="text-xl font-semibold text-gray-900">3. Size Reduction 📐</h2>
+        <p class="mt-2 text-gray-700">
+          <span class="font-bold text-green-600">Action:</span> Shred/chop to 5–10 mm flakes (manual shredder, blade grinder, or scissors).
+        </p>
+      </section>
+
+      <!-- Step 4: Decision: Type of Plastic? -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition duration-300 hover:shadow-green-300">
+        <h2 class="text-xl font-semibold text-gray-900">4. Decision: Type of Plastic? 🤔</h2>
+        <p class="mt-2 font-bold text-green-600">Thermoplastic Paths:</p>
+        <ul class="list-disc list-inside mt-1 ml-4 text-gray-700">
+          <li><span class="font-semibold">Path A: Melt-Sheeting / Slab Extrusion →</span> Produce sheets/films → bladders & patches</li>
+          <li><span class="font-semibold">Path B: Filament Extrusion →</span> Produce filament → FDM print connectors, valves, anchors</li>
+        </ul>
+        <p class="mt-2 font-bold text-green-600">Thermoset or Contaminated Plastics:</p>
+        <ul class="list-disc list-inside mt-1 ml-4 text-gray-700">
+          <li>Grind to powder → Use as filler in printed composites (with virgin binder)</li>
+          <li>Or store for energy/chemical recycling (not for demo)</li>
+        </ul>
+      </section>
+
+      <!-- Step 5: Finishing & Fabrication -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition duration-300 hover:shadow-green-300">
+        <h2 class="text-xl font-semibold text-gray-900">5. Finishing & Fabrication 🛠️</h2>
+        <ul class="list-disc list-inside mt-2 text-gray-700 ml-4">
+          <li>Heat/ultrasound weld seams of sheets</li>
+          <li>Laminate layers for barrier & strength</li>
+          <li>3D print connectors/valves</li>
+          <li>Assemble & perform leak/pressure checks</li>
+        </ul>
+      </section>
+
+      <!-- Step 6: Reuse Loops -->
+      <section class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition duration-300 hover:shadow-green-300">
+        <h2 class="text-xl font-semibold text-gray-900">6. Reuse Loops 🔄</h2>
+        <ul class="list-disc list-inside mt-2 text-gray-700 ml-4">
+          <li>Salvage printed connectors & undamaged film after habitat inflation</li>
+          <li>Use for repair patches or spare parts</li>
+        </ul>
+      </section>
+      
+    </main>
+
+    <footer class="bg-gray-800/80 backdrop-blur-sm text-center py-4 mt-10 text-sm text-gray-300 shadow-inner">
+      <p class="tracking-wider">© 2025 Resin-to-Habitat Process | Sustainable Space Habitats</p>
+      <p class="text-xs mt-1 text-gray-400">3D Background provided by Spline Tool.</p>
+    </footer>
+  </div>
+</body>
+</html>
